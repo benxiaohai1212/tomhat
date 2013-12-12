@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>ichartjs 示例</title>
+		<script type="text/javascript" src="ichart.1.2.src.js"></script>
+		<script type="text/javascript">
+				$(function(){
+					var data = [
+						{name : '已使用',value : 31.66,color:'#8338db'},
+						{name : '未使用',value : 68.34,color:'#3883bd'}
+					];
+					new iChart.Pie3D({
+							render : 'canvasDiv',
+							data: data,
+							align:'right',
+							offsety : -10,
+							background_color:'#DDDDDD',
+							legend : {
+								enable : true,
+								align:'left',
+								padding:2
+							},
+							tip:{
+								enable:true
+							},
+							sub_option:{
+								mini_label : true,
+								mini_label_threshold_angle : 30 ,
+								label:{
+									fontsize:9,
+									color:'#EFEFEF'
+								}
+							},
+							showpercent:true,
+							decimalsnum:2,
+							width : 400,
+							height : 350,
+							radius:140
+						}).draw();
+		</script>
+	</head>
+	<body>
+		<div id='canvasDiv'></div>
+	</body>
+</html>
